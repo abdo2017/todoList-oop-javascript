@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "watch": "babel src -d dist --presets=@babel/preset-env -ws",
+    "watch": "concurrently \"http-server\" \"babel src -d dist --presets=@babel/preset-env -ws\"",
     "build": "rm -rf dist && babel src -d dist --presets=@babel/preset-env"
   },
   "license": "MIT",
